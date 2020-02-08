@@ -109,7 +109,7 @@ int Check::findmin(){
     }
     return index;
 }
-Check::Check(string word):wrong_word(word),dictionary("./textfiles/vocabulary.txt",ios::in){
+Check::Check(string word):wrong_word(word),dictionary("vocabulary.txt",ios::in){
 }
 Check::~Check(){
     dictionary.close();
