@@ -22,6 +22,8 @@ int main(int argc, char* argv[]){
         }
         else{
             cout<<"Need more arguments!"<<endl;
+            giveHelp();
+            return 1;
         }
     }
     else if(argc == 3){
