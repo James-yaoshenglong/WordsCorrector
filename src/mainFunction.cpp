@@ -156,7 +156,7 @@ void FileCorrector::start(){//不用继承，要重写太多方法，以后可�
 
 
 void giveHelp(){
-    cout<<"Usage: wordsCorrector [options] [filename/signal word]"<<endl;
+    cout<<"Usage: ./wordsCorrector [options] [filename/signal word]"<<endl;
     cout<<"options:"<<endl;
     cout<<"\t-s single word\t Check for a singal word."<<endl;
     cout<<"\t-f filename\t Check for a whole txt file and output a new file in the same floder."<<endl;
