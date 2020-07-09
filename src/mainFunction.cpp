@@ -88,8 +88,8 @@ FileCorrector::FileCorrector(char* name):fileName(name),vocabularyList(),distanc
         }
     }
     if(i>=0){//to make sure no out of range of the below two substr function
-    outputName = fileName.substr(0,i)+"corrected"+fileName.substr(i,fileName.length()-i);//不能加括号，加了就会有'',这个bug还为解决
-    }
+    outputName = fileName.substr(0,i)+"(corrected)"+fileName.substr(i,fileName.length()-i);//不能加括号，加了就会有'',这个bug还为解决,
+    }                                                                                                                                                                                     // 尝试之后证明这是bash的语法规定，否则会理解为别的操作而不是字符串
     else{
         outputName = fileName+"corrected";
     }
