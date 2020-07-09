@@ -1,5 +1,5 @@
 # WordsCorrector
-##Introduction
+## Introduction
 A command line words corrector on Linux os<br>
 It has the function to check a singal word or a whole file based on Levenshtein Algorithm.
  

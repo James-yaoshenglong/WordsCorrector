@@ -16,7 +16,7 @@ Linux命令行版本的词汇纠正器<br>
 1. 节约FileCorrector类和SingalCorrector类中的重复代码（使用继承）
 2. ~~在输出的修改提示中添加原文行号~~
 3. 处理当前算法中大小写敏感的问题
-4.~~ 输出的文件名无法加括号的问题~~
+4.~~输出的文件名无法加括号的问题~~
 5. 处理成对标点符号如(),''等的问题
 6. 可以加入非英文字符检测
  
@@ -37,7 +37,7 @@ version2.0 can be improved in below parts:
 1. save the similar codes in FileCorrector class and SingalCorrector class(use inheritance)
 2. ~~add line number in the output revision tips~~
 3. solve the case sensitive problem in current algorithm
-4. solve the problem that the output file name can not add ()
+4. ~~solve the problem that the output file name can not add ()~~
 5. solve the problem that can not deal with punctuation in pairs like (), ''
 6. add non English character check
 
