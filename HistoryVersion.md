@@ -14,7 +14,7 @@ Linux命令行版本的词汇纠正器<br>
 当前版本可以处理单个单词和文件，详细使用方法和说明见[README.md](./README.md)<br>
 2.0版本还可以优化：
 1. 节约FileCorrector类和SingalCorrector类中的重复代码（使用继承）
-2. 在输出的修改提示中添加原文行号
+2. ~~在输出的修改提示中添加原文行号~~
 3. 处理当前算法中大小写敏感的问题
 4. 输出的文件名无法加括号的问题
 5. 处理成对标点符号如(),''等的问题
@@ -35,7 +35,7 @@ A command line words corrector on Linux OS<br>
 Current version can deal with singal word and a whole file, detailed usage and introduction see [README.md](./README.md)<br>
 version2.0 can be improved in below parts:
 1. save the similar codes in FileCorrector class and SingalCorrector class(use inheritance)
-2. add line number in the output revision tips
+2. ~~add line number in the output revision tips~~
 3. solve the case sensitive problem in current algorithm
 4. solve the problem that the output file name can not add ()
 5. solve the problem that can not deal with punctuation in pairs like (), ''

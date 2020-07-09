@@ -62,8 +62,8 @@ void FileCorrector::split(const string& source, string& word, string& punctuatio
 }
 
 void FileCorrector::output(const string& word, const string& punctuation, ofstream& outFile,bool flag){
-    if(flag){//此处还可添加原文行号位置
-        cout<<word<<" is wrong! Below are the similar words you may be want:"<<endl;
+    if(flag){//此处添加原文行号位置
+        cout<<"In line:"<<lineNum<<" "<<word<<" is wrong! Below are the similar words you may be want:"<<endl;
         int min = findmin(distanceList);
         outFile<<word<<"(";
         for(int i=0;i<distanceList.size();i++){//vocabulary 有可能比distancelist长
@@ -79,7 +79,7 @@ void FileCorrector::output(const string& word, const string& punctuation, ofstre
     }
 }
 
-FileCorrector::FileCorrector(char* name):fileName(name),vocabularyList(),distanceList(){
+FileCorrector::FileCorrector(char* name):fileName(name),vocabularyList(),distanceList(),lineNum(1){
     //拆分文件扩展名,形成输出文件名
     int i;
     for(i=fileName.length()-1;i>=0;i--){//不能重复定义，不然scope会变
@@ -136,7 +136,11 @@ void FileCorrector::start(){//不用继承，要重写太多方法，以后可�
                      output(word,punctuation,outFile,flag);
                     //输出空白符和清空distancelist
                     distanceList.clear();
-                    outFile<<char(inFile.get());//need to use char to 强制类型转换
+                    char whiteChar = inFile.get();
+                    if (whiteChar == '\n'){
+                        lineNum++; //行号计数
+                    }
+                    outFile<<whiteChar;//need to use char to 强制类型转换
                 }
                 outFile.close();
             }

@@ -27,6 +27,7 @@ class FileCorrector{
         string outputName;
         vector<string> vocabularyList;
         vector<int> distanceList;
+        int lineNum; //行号
         void split(const string&, string&, string&);
         friend int findmin(vector<int>);//find the min distance in distanceList 
         void output(const string&, const string&, ofstream&, bool);//output finection,the ofstream should not use const!!
