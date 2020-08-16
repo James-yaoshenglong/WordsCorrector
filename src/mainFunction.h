@@ -6,6 +6,8 @@
 using namespace std;
 
 const string VOCABULARY_FILE = "vocabulary.txt";
+// this dictionary can be replaced by the Linux embeded dictionary:
+// const string VOCABULARY_FILE = "/usr/share/dict/american-english";
 
 int findmin(vector<int>);//find the min distance in distanceList
 
